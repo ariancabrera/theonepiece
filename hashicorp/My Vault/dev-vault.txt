@@ -1,0 +1,37 @@
+DEV
+
+arian-dev-sp
+Key 1
+Client ID: wTA4Q1PNLTxzizZMKNjpxxDeXWWeel1s : export HCP_CLIENT_ID="wTA4Q1PNLTxzizZMKNjpxxDeXWWeel1s"
+Client Secret: BZ9moiBhHOYVDpjXTmC-f7_5WOVqa3szCdH11M6DYi8nmGSeh2jglKzqrrVpVN92 : export HCP_CLIENT_SECRET="BZ9moiBhHOYVDpjXTmC-f7_5WOVqa3szCdH11M6DYi8nmGSeh2jglKzqrrVpVN92
+Key 2
+CLient ID: a1zz6aCM6g3pErLcMoOCGfxAJ3bDMv4m
+Client Secret: Lgj2J9jaooGRxGaQYqNAbm1AOK5pJNrnkG-W982f9gYHDRjr8wyMygFsczufdvlT
+
+
+vault_cluster: https://arian-dev-vault-cluster-public-vault-302fbc34.e925f7f5.z1.hashicorp.cloud:8200
+
+export VAULT_ADDR="https://arian-dev-vault-cluster-public-vault-302fbc34.e925f7f5.z1.hashicorp.cloud:8200"
+
+export VAULT_TOKEN="hvs.CAESIKrCLO3jEQLxcAvbMayLRvAm6sEi68_0WHAnkqonYbwvGicKImh2cy5CeWJSTHdEWXUyUGFXa0tLTFlDVWp6MWMuNVZwWngQxWw"
+export VAULT_NAMESPACE=admin
+
+
+acabrera@acabrera-MXQMJ6126P My Vault % vault read auth/approle/role/webapp/role-id
+Key        Value
+---        -----
+role_id    af2b5c4d-6eb9-ef86-59e0-576df6f47800
+acabrera@acabrera-MXQMJ6126P My Vault % vault write -force auth/approle/role/webapp/secret-id
+Key                   Value
+---                   -----
+secret_id             74065aab-5ebb-2625-cf42-be89e3aad8c1
+secret_id_accessor    24a3828c-dd31-272e-b715-41f233d8c28d
+
+vault write auth/approle/login \
+role_id="af2b5c4d-6eb9-ef86-59e0-576df6f47800" \
+secret_id="74065aab-5ebb-2625-cf42-be89e3aad8c1"
+
+export APP_TOKEN="hvs.CAESIIW7WTW4N2PamaTohkEQ2yUqRXMJl9DS91dyTzCwLHE0GigKImh2cy5NblpkV2dsd1BVd1cwcHpxTjF0M2w1UkQuNVZwWngQ_aEH"
+
+hvs.CAESIIW7WTW4N2PamaTohkEQ2yUqRXMJl9DS91dyTzCwLHE0GigKImh2cy5NblpkV2dsd1BVd1cwcHpxTjF0M2w1UkQuNVZwWngQ_aEH
+
