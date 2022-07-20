@@ -1,0 +1,6 @@
+Organization: 5a3ea853-834e-4f09-916b-99dc9634eb8b
+
+Hello Leonard,
+
+Thanks for your patience and for providing this info, in order for me to serve you better, I need some clarification. After SSO is enabled the only way for a user to access HCP UI without SSO is using the [force email link](https://portal.cloud.hashicorp.com/sign-in?with=email) that I provided in previous message. 
+Are you still using this link to access [HCP UI](https://portal.cloud.hashicorp.com/sign-in)? If so could you please try accessing [HCP UI](https://portal.cloud.hashicorp.com/sign-in) without using the force link? 

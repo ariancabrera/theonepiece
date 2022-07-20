@@ -1,0 +1,45 @@
+Hey, the integration with datadog <> vault cluster prod-use1-monday started to show very different metrics since 2 days,
+we would like to have your help here
+
+ eilonmo@monday.com
+
+ Hello Eilonmo,
+
+ Thanks for reaching HCP support!
+
+We checked the server logs looking for information and we did see that there was an increase on lease revocations starting on Jun 22 which may have contributed to a small CPU spike. I’ll keep looking for more information from the logs where I can.
+Could you provide more info in regards of any recent changes or upgrades to your workflow since you saw this change?
+Could you also clarify what you previously saw in the logs before you noticed this change? 
+
+ Thanks and regards,
+
+
+Hello Eilonmo,
+
+Thanks for your patience, I am glad to see that you are able to get the data from vault streaming to datadog. Regarding the CPU utilization, it should show on the runtime widget on your dashboard Overview ![like this](image URL) . Could you please send a screenshot of your dashboard view ?
+
+Regarding the labels, the tags would show an "*" until they get customized by the user. My set up shows an asterisk as well, since it is a free tier I dont have many customizable options. [Here](https://docs.datadoghq.com/metrics/summary/) is some info on how to customize your metrics.
+
+Hope this helps, looking forward to hearing from you,
+
+Thanks and regards,
+
+
+API KEY
+e082c29e7ee735fff7c0fbc507dd7540
+e082c29e7ee735fff7c0fbc507dd7540
+
+Key ID
+64f26834-4d92-4fd4-a559-3f6621954314
+
+
+Per users email he is able to check vault is streaming metrics to datadog successfully, but it seems like their old configuration is not working
+
+
+(sum:host.cpu_seconds_total{*}.as_rate() - sum:host.cpu_seconds_total{mode:idle}.as_rate()) / sum:host.cpu_seconds_total{*}.as_rate() * 100
+
+
+Vault Cluster: prod-use1-vault
+Organization ID: 140e1703-64ed-42e0-b944-17a40d8626cd
+
+Project: 7920e134-bf36-4e96-85c2-36596133b3d9

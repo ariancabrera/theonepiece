@@ -1,0 +1,53 @@
+
+nkowaleski@homex.com
+
+Hello Nick,
+
+ 
+
+HashiCorp Support has received a request from Nick (nkowaleski@homex.com regarding your HCP Organization which requires email validation of the owner account. This request involves making a change to a HashiCorp Cloud Platform organization or account associated with this email address.
+
+ 
+
+In order for us to proceed with the support request, please respond to this email confirming what the request is for and that you approve the request.
+
+ 
+
+Once this email has been replied to confirming and approving the request, we will be able to proceed with the support request.
+
+
+
+
+
+Hi <owner>,
+Thanks for reaching out to HCP Support!
+One of the conditions for account deletion is that all resources have been destroyed. Can you please delete the active network resource (id: 1dbcd4e8-a770-46a3-a765-413cdc50b452) associated with your organization?
+Also, I just sent you a separate email to verify your identity. Please respond to that email confirming the request when you can. Once I've gotten you verified and all resources are destroyed, I'll go ahead and proceed with the account deletion process.
+Please be aware that the following conditions must be met before your account can be deleted:
+All other users have been deleted.
+The email address of the owner must be the only remaining user in the HCP org.
+All service principals have been deleted.
+All resources (HVNs, clusters, packer registry) have been deleted.
+Any outstanding balances have been paid.
+
+
+
+ andrew@catalogfinancial.com
+ GITHUB
+
+
+
+
+
+ Title: HCP Org/User Deletion Request
+
+Body: (paste the below text into the Jira description)
+
+Has the account been verified through separate email process? Yes
+Have all users/resources in the HCP org been deleted? Yes
+Does the IAM user need to be deleted? No
+Account Owner Email: ivecloudblack@gmail.com
+Org ID: b9de746a-54c7-4c44-a5f1-703de6e8fe03
+
+
+

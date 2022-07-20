@@ -1,0 +1,42 @@
+After enabling SSO for the hashicorp cloud platform - Admin/owner rights gone
+duplicated our accounts.
+
+Svc-devops@healthscope.com.au - owner
+leonard.tan@healthscope.com.au - admin
+Jason.Blennerhassett@healthscope.com.au - admin
+
+Please advise how to rectify this.
+
+Thanks
+Leonard Tan
+
+Hello Leonard,
+
+Thanks for reaching out to HCP support! 
+
+What you are describing is an expected behavior when setting up SSO.
+
+* When the Org Owner enables SSO, HCP will keep all existing users from that organization but requires users to sign up again with their SSO credentials. This will allow the Org Owner to test SSO without losing existing users, and will result in having two accounts with the same email address (Email/Github & SAMLP)
+
+* New user accounts provisioned via SSO are created on first successful log-in attempt, and will be automatically granted the least privileged role of organization “Viewer”.
+
+* With SSO enabled, the login page will default to SSO if the email domain matches the domain of that was configured for your SSO, regardless if the user setup SSO or not in their individual accounts.
+
+* Users can use [this special force email + password sign-in link](https://portal.cloud.hashicorp.com/sign-in?with=email) to sign in with the original (non-SSO) email and password as documented in [this KB Article](https://support.hashicorp.com/hc/en-us/articles/4404718731923-SSO-sign-in-issues-Force-Login-with-Email-Password-)
+
+Hope this helps! Please dont hesitate to reach out if you have any further questions.
+
+Thanks and regards,
+
+
+
+Requester Name: Leonard Tan (leonard.tan@healthscope.com.au)
+Organization: HSO-Infracstructure
+HCP OrgID: 4d3ccf54-7944-445e-8353-f735865e229c
+
+
+HCP user leonard.tan@healthscope.com.au recently configured SSO for their organization. After enabling SSO, this user was removed from the org (while troubleshooting ) and is being prompted to create a new organization when logging in with their Azure credentials directly from the HCP UI.
+
+This user shows in admin UI to have a SSO and EMAIL accounts with the same email address, but the SSO/SAML account is not associated with any HCP orgs. They confirmed they are still part of the domain that is configured to access HCP, and no other users are being impacted. 
+
+We’re almost positive this is a result of being removed after enabling SSO, and wondering what steps we can take to link Alex back to his organization since user invites are disabled via HCP.
